@@ -19,3 +19,30 @@ elements[2].style.color = "red"
 elements[3].style.color = "green"
 elements[4].style.color = "green"
 elements[5].style.color = "green"
+
+//task#3
+const container = document.getElementById("container")
+const box = []
+
+for (let i = 0; i < 5; i++) {
+    const myDiv = document.createElement("div")
+    myDiv.className = "element"
+    myDiv.textContent = "Element"
+    switch (i) {
+        case 0: myDiv.innerHTML += `<span style="color: green"> ${i}</span>`
+            break;
+        case 1: myDiv.innerHTML += `<span style="color: red"> ${i}</span>`
+            break;
+        case 2: myDiv.innerHTML += `<span style="color: greenyellow"> ${i}</span>`
+            break;
+        case 3: myDiv.innerHTML += `<span style="color: blue"> ${i}</span>`
+            break;
+        default: myDiv.innerHTML += `<span style="color: black"> ${i}</span>`
+            break;
+    }
+
+    box.push(myDiv)
+
+}
+
+container.append(...box)
