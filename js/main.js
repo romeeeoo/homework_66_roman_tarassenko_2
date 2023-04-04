@@ -13,12 +13,10 @@ console.log(line_5.innerText);
 
 //task#2
 const elements = document.getElementsByClassName("element")
-elements[0].style.color = "red"
-elements[1].style.color = "red"
-elements[2].style.color = "red"
-elements[3].style.color = "green"
-elements[4].style.color = "green"
-elements[5].style.color = "green"
+for (let i = 0; i < elements.length; i++){
+    elements[i].style.color = "red";
+    if (i > 2)(elements[i].style.color = "green")
+}
 
 //task#3
 const container = document.getElementById("container")
